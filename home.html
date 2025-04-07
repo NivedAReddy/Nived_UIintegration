@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - Transcryption</title>
+  <!-- Google Fonts: Poppins for body text & Aboreto for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Aboreto&display=swap" rel="stylesheet">
+  <!-- Sidebar CSS -->
+  <link rel="stylesheet" href="sidebar.css">
+  <!-- Main CSS for home page -->
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <!-- Sidebar Container: Sidebar will be injected here -->
+  <div id="sidebar-container"></div>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <div class="home-container">
+      <h1>WELCOME TO TRANSCRYPTION</h1>
+      
+      <!-- Welcome Card -->
+      <div class="welcome-card">
+        <h2>Automating Transcript Processing</h2>
+        <p>Transcryption is an innovative solution designed to streamline and automate the processing of academic transcripts. Our application significantly reduces manual data entry, saves time and resources, and improves overall efficiency in transcript management.</p>
+        <p>Currently, ASU processes tens of thousands of high school transcripts annually with no standardized format, requiring extensive manual processing by student workers. This project aims to transform this inefficient process through intelligent automation.</p>
+      </div>
+      
+      <!-- Info Grid -->
+      <div class="info-grid">
+        <!-- Problem Card -->
+        <div class="info-card">
+          <h3>The Problem</h3>
+          <p>ASU processes over 68,000 transcripts during the Fall admission season alone. With 80% being PDFs (about 54,400 transcripts), the current manual process is:</p>
+          <ul class="benefits-list">
+            <li>Costly - over $1,000,000 per year</li>
+            <li>Time-consuming - approximately $1,108 per hour</li>
+            <li>Inefficient - requiring 80+ student workers</li>
+            <li>Slow - delaying admissions decisions</li>
+          </ul>
+        </div>
+        
+        <!-- Solution Card -->
+        <div class="info-card">
+          <h3>Our Solution</h3>
+          <p>Transcryption uses advanced technology to automate transcript processing:</p>
+          <ul class="benefits-list">
+            <li>AWS S3 for secure file storage</li>
+            <li>AWS Tesseract for optical character recognition</li>
+            <li>Python for efficient data processing</li>
+            <li>Web-based interface for easy access</li>
+          </ul>
+        </div>
+        
+        <!-- Impact Card -->
+        <div class="info-card">
+          <h3>The Impact</h3>
+          <p>Manual processing: <span class="key-stat">17 minutes</span> per transcript</p>
+          <p>With Transcryption: <span class="key-stat">30 seconds</span> per transcript</p>
+          <p>Accuracy rate: <span class="key-stat">96%</span></p>
+          <p>Cost reduction: <span class="key-stat">85%</span> cheaper</p>
+          <p>This represents a significant improvement in efficiency, accuracy, and cost-effectiveness for transcript processing.</p>
+        </div>
+      </div>
+      
+      <!-- Team Section -->
+      <div class="team-section">
+        <h3>Meet Our Team</h3>
+        <div class="team-members">
+          <div class="team-member">Lauren</div>
+          <div class="team-member">Wyatt</div>
+          <div class="team-member">Justin</div>
+          <div class="team-member">Nived</div>
+          <div class="team-member">Adelina</div>
+          <div class="team-member">Ryan</div>
+          <div class="team-member">Mishal</div>
+          <div class="team-member">Sahil</div>
+        </div>
+        <p style="margin-top: 15px;">Our team of dedicated professionals has developed this solution to address the significant challenges in transcript processing.</p>
+      </div>
+      
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <p>Ready to streamline your transcript processing?</p>
+        <a href="upload.html" class="cta-button">Upload Files Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load Sidebar -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('sidebar-container').innerHTML = data;
+        })
+        .catch(err => console.error('Error loading sidebar:', err));
+    });
+  </script>
+</body>
+</html>
